@@ -84,7 +84,7 @@ export default function Page({ params }: ProductType) {
       await fetch(`https://ecom-api-miloud.onrender.com/order/${orderId}`, {
         method: "PATCH",
         body: JSON.stringify({
-          name,
+          name: `20 ${name}`,
           number: phone,
           wilaya,
           adress,
@@ -147,7 +147,7 @@ export default function Page({ params }: ProductType) {
           new Date().getMonth() + 1
         } - ${new Date().getHours()}H : ${new Date().getMinutes()}M`
       );
-      data.append("name", `20 ${name}`);
+      data.append("name", `${name}`);
       data.append("phone", `${phone}`);
       data.append("wilaya", wilaya);
       data.append("adress", adress);
